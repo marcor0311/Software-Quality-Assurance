@@ -1,0 +1,54 @@
+<div>
+    <form>
+      <table>
+        <tbody>
+          <!-- Campo de texto de la calculadora -->
+          <tr>
+            <td colspan="4">
+              <input type="text" id="display" name="display" [value]="display" readonly>
+            </td>
+          </tr>
+  
+          <!-- Fila de botones con las operaciones -->
+          <tr>
+            <td><button type="button" id="btnLimpiar" (click)="limpiar()">C</button></td>
+            <td></td>
+            <td></td>
+            <td><button type="button" id="btnDividir" (click)="definirOperacion('/')">/</button></td>
+          </tr>
+  
+          <!-- Fila de botones de números y multiplicación -->
+          <tr>
+            <td><button type="button" id="btn7" (click)="adicionarNumero('7')">7</button></td>
+            <td><button type="button" id="btn8" (click)="adicionarNumero('8')">8</button></td>
+            <td><button type="button" id="btn9" (click)="adicionarNumero('9')">9</button></td>
+            <td><button type="button" id="btnMultiplicar" (click)="definirOperacion('x')">x</button></td>
+          </tr>
+  
+          <!-- Fila de botones de números y resta -->
+          <tr>
+            <td><button type="button" id="btn4" (click)="adicionarNumero('4')">4</button></td>
+            <td><button type="button" id="btn5" (click)="adicionarNumero('5')">5</button></td>
+            <td><button type="button" id="btn6" (click)="adicionarNumero('6')">6</button></td>
+            <td><button type="button" id="btnResta" (click)="definirOperacion('-')">-</button></td>
+          </tr>
+  
+          <!-- Fila de botones de números y suma -->
+          <tr>
+            <td><button type="button" id="btn1" (click)="adicionarNumero('1')">1</button></td>
+            <td><button type="button" id="btn2" (click)="adicionarNumero('2')">2</button></td>
+            <td><button type="button" id="btn3" (click)="adicionarNumero('3')">3</button></td>
+            <td><button type="button" id="btnSuma" (click)="definirOperacion('+')">+</button></td>
+          </tr>
+  
+          <!-- Fila de botón 0, decimal y botón igual -->
+          <tr>
+            <td></td>
+            <td><button type="button" id="btn0" (click)="adicionarNumero('0')">0</button></td>
+            <td><button type="button" id="btnDecimal" (click)="adicionarNumero('.')">.</button></td>
+            <td><button type="button" id="btnIgual" (click)="calcular()">=</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </div>
